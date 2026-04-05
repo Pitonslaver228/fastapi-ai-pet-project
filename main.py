@@ -6,7 +6,7 @@ from gemini_client import get_answer_from_gemini
 
 from contextlib import asynccontextmanager
 
-from db import Base, engine, get_user_requests
+from db import Base, engine, get_user_requests, add_request_data
 
 
 @asynccontextmanager
@@ -16,7 +16,10 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(lifespan=lifespan)
+app = FastAPI(
+    title="My Pet Project",
+    lifespan=lifespan
+)
 
 
 @app.get("/requests")
@@ -29,8 +32,15 @@ def get_my_requests(request: Request):
 
 @app.post("/requests")
 def send_prompt(
+        request: Request,
         prompt = Body(embed=True)
 ):
+    user_ip_address = request.client.host
     answer = get_answer_from_gemini(prompt)
+    add_request_data(
+        ip_address=user_ip_address,
+        prompt=prompt,
+        response=answer
+    )
 
     return {"answer": answer}
