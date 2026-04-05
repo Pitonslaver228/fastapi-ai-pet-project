@@ -1,6 +1,7 @@
 from contextlib import contextmanager
 
 from fastapi import FastAPI, Body, Request
+from fastapi.middleware.cors import CORSMiddleware
 
 from gemini_client import get_answer_from_gemini
 
@@ -44,3 +45,12 @@ def send_prompt(
     )
 
     return {"answer": answer}
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5500"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
