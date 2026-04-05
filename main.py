@@ -1,8 +1,22 @@
+from contextlib import contextmanager
+
 from fastapi import FastAPI, Body
+
 from gemini_client import get_answer_from_gemini
 
+from contextlib import asynccontextmanager
 
-app = FastAPI()
+from db import Base, engine
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    Base.metadata.create_all(engine)
+    print("Все таблицы созданы")
+    yield
+
+
+app = FastAPI(lifespan=lifespan)
 
 
 @app.get("/requests")
