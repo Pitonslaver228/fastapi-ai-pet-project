@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Чат с ИИ Gemini</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <main class="panel panel-main">
+      <div class="topbar">
+        <div>
+          <p class="eyebrow">fastapi-ai-pet-project</p>
+          <h1>Чат с ИИ Gemini</h1>
+        </div>
+        <div id="apiStatus" class="status-badge offline">
+          <span class="status-dot"></span>
+          <span id="statusText">API неактивен</span>
+        </div>
+      </div>
+
+      <section class="composer-card">
+        <label for="promptInput" class="label">Введите запрос</label>
+        <textarea
+          id="promptInput"
+          placeholder="Например: составь план изучения FastAPI на 2 недели"
+        ></textarea>
+
+        <div class="actions">
+          <button id="sendBtn" class="btn btn-primary">Отправить</button>
+          <button id="refreshBtn" class="btn btn-secondary">Обновить</button>
+          <button id="clearBtn" class="btn btn-secondary">Очистить</button>
+        </div>
+
+        <div id="errorBox" class="error-box hidden"></div>
+      </section>
+
+      <section class="answer-card">
+        <div class="card-header">
+          <h2>Ответ</h2>
+        </div>
+        <div id="answerBox" class="answer-content">Ответ появится здесь.</div>
+      </section>
+    </main>
+
+    <aside class="panel panel-side">
+      <div class="card-header side-header">
+        <h2>История</h2>
+        <span id="historyCount" class="count-badge">0</span>
+      </div>
+
+      <div id="historyList" class="history-list">
+        <div class="empty-state">История пока пуста.</div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
