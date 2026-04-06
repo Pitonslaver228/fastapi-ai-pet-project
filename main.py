@@ -46,7 +46,6 @@ def send_prompt(
 
     return {"answer": answer}
 
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5500"],
