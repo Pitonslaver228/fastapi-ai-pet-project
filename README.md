@@ -79,8 +79,6 @@ http://localhost:5500
 
 ## <img width="1919" height="993" alt="image" src="https://github.com/user-attachments/assets/771043ca-f46e-4782-8a4a-20597fad4812" />
 
-## <img width="1918" height="991" alt="image" src="https://github.com/user-attachments/assets/9852c000-d18a-44d5-8452-528d811761d1" />
-
 ## <img width="1919" height="992" alt="image" src="https://github.com/user-attachments/assets/aa746681-adcd-45cb-8c28-f965dde1d04d" />
 
 
