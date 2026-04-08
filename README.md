@@ -75,13 +75,13 @@ http://localhost:5500
 	•	БД requests.db создаётся автоматически при запуске приложения
 
 ## Примеры использования
-<img width="1919" height="994" alt="image" src="https://github.com/user-attachments/assets/f26b309a-2cf0-4fc1-a8bd-d3cd9c906dd7" />
+## <img width="1919" height="994" alt="image" src="https://github.com/user-attachments/assets/f26b309a-2cf0-4fc1-a8bd-d3cd9c906dd7" />
 
-<img width="1919" height="993" alt="image" src="https://github.com/user-attachments/assets/771043ca-f46e-4782-8a4a-20597fad4812" />
+## <img width="1919" height="993" alt="image" src="https://github.com/user-attachments/assets/771043ca-f46e-4782-8a4a-20597fad4812" />
 
-<img width="1918" height="991" alt="image" src="https://github.com/user-attachments/assets/9852c000-d18a-44d5-8452-528d811761d1" />
+## <img width="1918" height="991" alt="image" src="https://github.com/user-attachments/assets/9852c000-d18a-44d5-8452-528d811761d1" />
 
-<img width="1919" height="992" alt="image" src="https://github.com/user-attachments/assets/aa746681-adcd-45cb-8c28-f965dde1d04d" />
+## <img width="1919" height="992" alt="image" src="https://github.com/user-attachments/assets/aa746681-adcd-45cb-8c28-f965dde1d04d" />
 
 
 
